@@ -1,12 +1,15 @@
 import React from "react";
 import { MixtapeProvider } from "./MixtapeContext";
 import { SongList } from "./SongList";
+import { Controls } from "./Controls";
 import "./index.css";
+
 export const MixtapeApp = () => {
   return (
     <MixtapeProvider songs={songs}>
       <div className="app">
         <h1 className="heading">My 🔥 Mixtape</h1>
+        <Controls />
         <SongList />
       </div>
     </MixtapeProvider>

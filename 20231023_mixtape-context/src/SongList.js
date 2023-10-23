@@ -5,17 +5,21 @@ import { Song } from "./Song";
 export const SongList = () => {
   // Your code here! ✨
   const { genre, sortOrder, songs } = useContext(MixtapeContext);
+
+  const filteredSongs = songs.filter(
+    (song) => genre === "all" || song.genre === genre
+  );
+
+  let sortedSongs = filteredSongs.sort((a, b) =>
+    sortOrder === "ascending" ? a.year - b.year : b.year - a.year
+  );
+
   return (
     <>
       <h2>TODO: Update taste in music...?</h2>
 
-      {songs.map((song) => (
-        <Song
-          artist={song.artist}
-          genre={song.genre}
-          name={song.name}
-          year={song.year}
-        />
+      {sortedSongs.map((song) => (
+        <Song {...song} key={song.name} />
       ))}
     </>
   );
