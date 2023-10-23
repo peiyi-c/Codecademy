@@ -1,3 +1,18 @@
+## File Structure
+
+````
+- public
+    index.html
+- src
+    MixtapeApp.js
+    MixtapeContext.js
+      SongList.js
+        Song.js
+      Controls.js
+    index.css
+    index.js
+````
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
