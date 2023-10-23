@@ -1,6 +1,7 @@
 import React from "react";
 import { MixtapeProvider } from "./MixtapeContext";
 import { SongList } from "./SongList";
+import "./index.css";
 export const MixtapeApp = () => {
   return (
     <MixtapeProvider songs={songs}>
